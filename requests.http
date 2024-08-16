@@ -1,0 +1,36 @@
+@url = http://localhost:3000
+
+// POST a Product
+POST {{url}}/api/products
+Content-Type: application/json
+
+{
+    "name": "test add",
+    "quantity": 35,
+    "price": 1.99
+}
+
+###
+
+// GET all Products
+GET {{url}}/api/products
+
+###
+
+// Get a Product based on id
+GET {{url}}/api/products/66bfa3d2c9ead74a187068d3
+
+###
+
+// Update a Product based on id
+PUT {{url}}/api/products/66bfbcd6ea9f5d72ea4cf782
+Content-Type: application/json
+
+{
+    "name": "updated donut"
+}
+
+###
+
+// Delete a Product based on id
+DELETE {{url}}/api/products/66bfbd06ea9f5d72ea4cf789
